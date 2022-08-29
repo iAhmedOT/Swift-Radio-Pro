@@ -1,8 +1,9 @@
 //
-//  StationsViewController.swift
-//  Swift Radio
+//  AboutViewController.swift
+//  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 7/19/15.
+//  Edited by Ahmed AlOtaibi on 10/01/2021.
 //  Copyright (c) 2015 MatthewFecher.com. All rights reserved.
 //
 
@@ -95,7 +96,7 @@ class StationsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Swift Radio"
+        title = "KXSF 102.5FM"
     }
 
     //*****************************************************************
@@ -374,7 +375,7 @@ extension StationsViewController: UISearchResultsUpdating {
         guard searchable else { return }
         
         searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.sizeToFit()
         
         // Add UISearchController to the tableView

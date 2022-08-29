@@ -1,8 +1,9 @@
 //
-//  NowPlayingViewController.swift
-//  Swift Radio
+//  AboutViewController.swift
+//  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 7/22/15.
+//  Edited by Ahmed AlOtaibi on 10/01/2021.
 //  Copyright (c) 2015 MatthewFecher.com. All rights reserved.
 //
 
@@ -15,7 +16,7 @@ import AVKit
 // NowPlayingViewControllerDelegate
 //*****************************************************************
 
-protocol NowPlayingViewControllerDelegate: class {
+protocol NowPlayingViewControllerDelegate: AnyObject {
     func didPressPlayingButton()
     func didPressStopButton()
     func didPressNextButton()
@@ -65,15 +66,15 @@ class NowPlayingViewController: UIViewController {
         createNowPlayingAnimation()
         
         // Set AlbumArtwork Constraints
-        optimizeForDeviceSize()
+//        optimizeForDeviceSize()
 
         // Set View Title
         self.title = currentStation.name
         
         // Set UI
         albumImageView.image = currentTrack.artworkImage
-        stationDescLabel.text = currentStation.desc
-        stationDescLabel.isHidden = currentTrack.artworkLoaded
+//        stationDescLabel.text = currentStation.desc
+//        stationDescLabel.isHidden = currentTrack.artworkLoaded
         
         // Check for station change
         newStation ? stationDidChange() : playerStateDidChange(radioPlayer.state, animate: false)
@@ -136,8 +137,8 @@ class NowPlayingViewController: UIViewController {
     func stationDidChange() {
         radioPlayer.radioURL = URL(string: currentStation.streamURL)
         albumImageView.image = currentTrack.artworkImage
-        stationDescLabel.text = currentStation.desc
-        stationDescLabel.isHidden = currentTrack.artworkLoaded
+//        stationDescLabel.text = currentStation.desc
+//        stationDescLabel.isHidden = currentTrack.artworkLoaded
         title = currentStation.name
     }
     
@@ -197,11 +198,11 @@ class NowPlayingViewController: UIViewController {
         if track.artworkLoaded {
             // Animate artwork
             albumImageView.animation = "wobble"
-            albumImageView.duration = 2
+            albumImageView.duration = 1
             albumImageView.animate()
             stationDescLabel.isHidden = true
         } else {
-            stationDescLabel.isHidden = false
+//            stationDescLabel.isHidden = false
         }
         
         // Force app to update display
@@ -238,7 +239,7 @@ class NowPlayingViewController: UIViewController {
         case .loading:
             message = "Loading Station ..."
         case .urlNotSet:
-            message = "Station URL not valide"
+            message = "Station URL not valid"
         case .readyToPlay, .loadingFinished:
             playbackStateDidChange(radioPlayer.playbackState, animate: animate)
             return
@@ -253,22 +254,22 @@ class NowPlayingViewController: UIViewController {
     // MARK: - UI Helper Methods
     //*****************************************************************
     
-    func optimizeForDeviceSize() {
-        
-        // Adjust album size to fit iPhone 4s, 6s & 6s+
-        let deviceHeight = self.view.bounds.height
-        
-        if deviceHeight == 480 {
-            albumHeightConstraint.constant = 106
-            view.updateConstraints()
-        } else if deviceHeight == 667 {
-            albumHeightConstraint.constant = 230
-            view.updateConstraints()
-        } else if deviceHeight > 667 {
-            albumHeightConstraint.constant = 260
-            view.updateConstraints()
-        }
-    }
+//    func optimizeForDeviceSize() {
+//
+//        // Adjust album size to fit iPhone 4s, 6s & 6s+
+//        let deviceHeight = self.view.bounds.height
+//
+//        if deviceHeight == 480 {
+//            albumHeightConstraint.constant = 106
+//            view.updateConstraints()
+//        } else if deviceHeight == 667 {
+//            albumHeightConstraint.constant = 230
+//            view.updateConstraints()
+//        } else if deviceHeight > 667 {
+//            albumHeightConstraint.constant = 260
+//            view.updateConstraints()
+//        }
+//    }
     
     func updateLabels(with statusMessage: String? = nil, animate: Bool = true) {
 
@@ -282,7 +283,7 @@ class NowPlayingViewController: UIViewController {
         
         // There's a an interruption or pause in the audio queue
         
-        // Update UI only when it's not aleary updated
+        // Update UI only when it's not already updated
         guard songLabel.text != statusMessage else { return }
         
         songLabel.text = statusMessage
@@ -348,7 +349,7 @@ class NowPlayingViewController: UIViewController {
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         
-        let radioShoutout = "I'm listening to \(currentStation.name) via Swift Radio Pro"
+        let radioShoutout = "I'm listening to \(currentStation.name) via KXSF 102.5 FM App"
         let shareImage = ShareImageGenerator(radioShoutout: radioShoutout, track: currentTrack).generate()
         
         let activityViewController = UIActivityViewController(activityItems: [radioShoutout, shareImage], applicationActivities: nil)

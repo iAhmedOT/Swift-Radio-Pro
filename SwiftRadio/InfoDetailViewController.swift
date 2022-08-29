@@ -1,8 +1,9 @@
 //
-//  InfoDetailViewController.swift
-//  Swift Radio
+//  AboutViewController.swift
+//  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 7/9/15.
+//  Edited by Ahmed AlOtaibi on 10/01/2021.
 //  Copyright (c) 2015 MatthewFecher.com. All rights reserved.
 //
 
@@ -56,7 +57,7 @@ class InfoDetailViewController: UIViewController {
     
     func loadDefaultText() {
         // Add your own default ext
-        stationLongDescTextView.text = "You are listening to Swift Radio. This is a sweet open source project. Tell your friends, swiftly!"
+        stationLongDescTextView.text = "You are listening to KXFM Radio."
     }
     
     func setupStationLogo() {

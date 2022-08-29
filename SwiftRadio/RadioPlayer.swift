@@ -1,9 +1,10 @@
 //
-//  RadioPlayer.swift
-//  SwiftRadio
+//  AboutViewController.swift
+//  KXSF FM Radio
 //
-//  Created by Fethi El Hassasna on 2018-01-05.
-//  Copyright © 2018 matthewfecher.com. All rights reserved.
+//  Created by Matthew Fecher on 7/2/15.
+//  Edited by Ahmed AlOtaibi on 10/01/2021.
+//  Copyright (c) 2015 MatthewFecher.com. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +13,7 @@ import UIKit
 // RadioPlayerDelegate: Sends FRadioPlayer and Station/Track events
 //*****************************************************************
 
-protocol RadioPlayerDelegate: class {
+protocol RadioPlayerDelegate: AnyObject {
     func playerStateDidChange(_ playerState: FRadioPlayerState)
     func playbackStateDidChange(_ playbackState: FRadioPlaybackState)
     func trackDidUpdate(_ track: Track?)
@@ -96,7 +97,7 @@ class RadioPlayer {
             }
         } else {
             // load local station image
-            let image = UIImage(named: station.imageURL) ?? #imageLiteral(resourceName: "albumArt")
+            let image = UIImage(named: station.imageURL) ?? #imageLiteral(resourceName: "logo")
             completionHandler(image)
         }
     }

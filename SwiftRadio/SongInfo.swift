@@ -1,9 +1,10 @@
 //
-//  SongInfo.swift
-//  SwiftRadio
+//  AboutViewController.swift
+//  KXSF FM Radio
 //
 //  Created by Seungsub Oh on 2021/01/12.
-//  Copyright © 2021 matthewfecher.com. All rights reserved.
+//  Edited by Ahmed AlOtaibi on 10/01/2021.
+//  Copyright (c) 2015 MatthewFecher.com. All rights reserved.
 //
 
 import Foundation

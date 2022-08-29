@@ -2,42 +2,68 @@
   "images" : [
     {
       "extent" : "full-screen",
+      "filename" : "Logo-high-res-01-color.jpg",
       "idiom" : "iphone",
-      "subtype" : "736h",
-      "filename" : "6plus.png",
-      "minimum-system-version" : "8.0",
+      "minimum-system-version" : "12.0",
       "orientation" : "portrait",
-      "scale" : "3x"
+      "scale" : "3x",
+      "subtype" : "2688h"
     },
     {
       "extent" : "full-screen",
+      "filename" : "iPhoneXr.jpg",
       "idiom" : "iphone",
-      "subtype" : "667h",
-      "filename" : "Portrait6.png",
-      "minimum-system-version" : "8.0",
+      "minimum-system-version" : "12.0",
       "orientation" : "portrait",
-      "scale" : "2x"
+      "scale" : "2x",
+      "subtype" : "1792h"
     },
     {
-      "orientation" : "portrait",
-      "idiom" : "iphone",
-      "filename" : "4s.png",
       "extent" : "full-screen",
+      "filename" : "iPhoneX.jpg",
+      "idiom" : "iphone",
+      "minimum-system-version" : "11.0",
+      "orientation" : "portrait",
+      "scale" : "3x",
+      "subtype" : "2436h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "iPhoneHD5.5.jpg",
+      "idiom" : "iphone",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
+      "scale" : "3x",
+      "subtype" : "736h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "iPhoneHD4.7.jpg",
+      "idiom" : "iphone",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
+      "scale" : "2x",
+      "subtype" : "667h"
+    },
+    {
+      "extent" : "full-screen",
+      "filename" : "iPad1x.jpg",
+      "idiom" : "ipad",
       "minimum-system-version" : "7.0",
-      "scale" : "2x"
+      "orientation" : "portrait",
+      "scale" : "1x"
     },
     {
       "extent" : "full-screen",
-      "idiom" : "iphone",
-      "subtype" : "retina4",
-      "filename" : "5C.png",
+      "filename" : "iPad2x.jpg",
+      "idiom" : "ipad",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
       "scale" : "2x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

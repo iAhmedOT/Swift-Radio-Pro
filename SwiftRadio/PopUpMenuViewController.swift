@@ -1,8 +1,9 @@
 //
-//  PopUpMenuViewController.swift
-//  Swift Radio
+//  AboutViewController.swift
+//  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 7/9/15.
+//  Edited by Ahmed AlOtaibi on 10/01/2021.
 //  Copyright (c) 2015 MatthewFecher.com. All rights reserved.
 //
 
@@ -47,7 +48,7 @@ class PopUpMenuViewController: UIViewController {
    
     @IBAction func websiteButtonPressed(_ sender: UIButton) {
         // Use your own website URL here
-        guard let url = URL(string: "https://github.com/analogcode/") else { return }
+        guard let url = URL(string: "https://kxsf.fm") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
