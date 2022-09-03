@@ -74,9 +74,6 @@ class StationsViewController: UIViewController {
         // Setup Pull to Refresh
         setupPullToRefresh()
         
-        // Create NowPlaying Animation
-        createNowPlayingAnimation()
-        
         // Activate audioSession
         do {
             try AVAudioSession.sharedInstance().setActive(true)
@@ -111,18 +108,6 @@ class StationsViewController: UIViewController {
         tableView.addSubview(refreshControl)
     }
     
-    func createNowPlayingAnimation() {
-        nowPlayingAnimationImageView.animationImages = AnimationFrames.createFrames()
-        nowPlayingAnimationImageView.animationDuration = 0.7
-    }
-    
-    func createNowPlayingBarButton() {
-        guard navigationItem.rightBarButtonItem == nil else { return }
-        let btn = UIBarButtonItem(title: "", style: .plain, target: self, action:#selector(nowPlayingBarButtonPressed))
-        btn.image = UIImage(named: "btn-nowPlaying")
-        navigationItem.rightBarButtonItem = btn
-    }
-    
     //*****************************************************************
     // MARK: - Actions
     //*****************************************************************
@@ -152,16 +137,8 @@ class StationsViewController: UIViewController {
     
     func loadStationsFromJSON() {
         
-        // Turn on network indicator in status bar
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
         // Get the Radio Stations
         DataManager.getStationDataWithSuccess() { (data) in
-            
-            // Turn off network indicator in status bar
-            defer {
-                DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
-            }
             
             if kDebugLog { print("Stations JSON Found") }
             
@@ -223,26 +200,6 @@ class StationsViewController: UIViewController {
         navigationItem.rightBarButtonItem = nil
     }
     
-    // Update the now playing button title
-    private func updateNowPlayingButton(station: RadioStation?, track: Track?) {
-        guard let station = station else { resetCurrentStation(); return }
-        
-        var playingTitle = station.name + ": "
-        
-        if track?.title == station.name {
-            playingTitle += "Now playing ..."
-        } else if let track = track {
-            playingTitle += track.title + " - " + track.artist
-        }
-        
-        stationNowPlayingButton.setTitle(playingTitle, for: .normal)
-        stationNowPlayingButton.isEnabled = true
-        createNowPlayingBarButton()
-    }
-    
-    func startNowPlayingAnimation(_ animate: Bool) {
-        animate ? nowPlayingAnimationImageView.startAnimating() : nowPlayingAnimationImageView.stopAnimating()
-    }
     
     private func getIndex(of station: RadioStation?) -> Int? {
         guard let station = station, let index = stations.firstIndex(of: station) else { return nil }
@@ -423,12 +380,10 @@ extension StationsViewController: RadioPlayerDelegate {
     
     func playbackStateDidChange(_ playbackState: FRadioPlaybackState) {
         nowPlayingViewController?.playbackStateDidChange(playbackState, animate: true)
-        startNowPlayingAnimation(radioPlayer.player.isPlaying)
     }
     
     func trackDidUpdate(_ track: Track?) {
         updateLockScreen(with: track)
-        updateNowPlayingButton(station: radioPlayer.station, track: track)
         updateHandoffUserActivity(userActivity, station: radioPlayer.station, track: track)
         nowPlayingViewController?.updateTrackMetadata(with: track)
     }

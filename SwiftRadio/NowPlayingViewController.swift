@@ -64,17 +64,12 @@ class NowPlayingViewController: UIViewController {
         
         // Create Now Playing BarItem
         createNowPlayingAnimation()
-        
-        // Set AlbumArtwork Constraints
-//        optimizeForDeviceSize()
 
         // Set View Title
         self.title = currentStation.name
         
         // Set UI
         albumImageView.image = currentTrack.artworkImage
-//        stationDescLabel.text = currentStation.desc
-//        stationDescLabel.isHidden = currentTrack.artworkLoaded
         
         // Check for station change
         newStation ? stationDidChange() : playerStateDidChange(radioPlayer.state, animate: false)
@@ -137,8 +132,6 @@ class NowPlayingViewController: UIViewController {
     func stationDidChange() {
         radioPlayer.radioURL = URL(string: currentStation.streamURL)
         albumImageView.image = currentTrack.artworkImage
-//        stationDescLabel.text = currentStation.desc
-//        stationDescLabel.isHidden = currentTrack.artworkLoaded
         title = currentStation.name
     }
     
@@ -201,8 +194,6 @@ class NowPlayingViewController: UIViewController {
             albumImageView.duration = 1
             albumImageView.animate()
             stationDescLabel.isHidden = true
-        } else {
-//            stationDescLabel.isHidden = false
         }
         
         // Force app to update display
@@ -220,11 +211,11 @@ class NowPlayingViewController: UIViewController {
         
         switch playbackState {
         case .paused:
-            message = "Station Paused..."
+            message = "..."
         case .playing:
             message = nil
         case .stopped:
-            message = "Station Stopped..."
+            message = "..."
         }
         
         updateLabels(with: message, animate: animate)
@@ -254,22 +245,7 @@ class NowPlayingViewController: UIViewController {
     // MARK: - UI Helper Methods
     //*****************************************************************
     
-//    func optimizeForDeviceSize() {
-//
-//        // Adjust album size to fit iPhone 4s, 6s & 6s+
-//        let deviceHeight = self.view.bounds.height
-//
-//        if deviceHeight == 480 {
-//            albumHeightConstraint.constant = 106
-//            view.updateConstraints()
-//        } else if deviceHeight == 667 {
-//            albumHeightConstraint.constant = 230
-//            view.updateConstraints()
-//        } else if deviceHeight > 667 {
-//            albumHeightConstraint.constant = 260
-//            view.updateConstraints()
-//        }
-//    }
+
     
     func updateLabels(with statusMessage: String? = nil, animate: Bool = true) {
 

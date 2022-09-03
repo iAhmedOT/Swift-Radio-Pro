@@ -2,11 +2,11 @@
     "station":
     [
         {
-            "name": "KXSF 102.5 FM San Francisco",
+            "name": "KXSF 102.5 FM",
             "streamURL": "http://stream.kxsf.fm:8000/sfcr?type=http&nocache=38779",
             "imageURL": "logo.png",
-            "desc": "Radio for the SF Bay Area Community.",
-            "longDesc": "Radio for the SF Bay Area Community."
+            "desc": "The SF Bay Area Community",
+            "longDesc": "KXSF’s Mission is to amplify the diverse voices of our world, by providing musically creative and socially aware radio, San Francisco style."
         }
     ]
 }
