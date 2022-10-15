@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  NowPlayingViewController.swift
 //  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 7/22/15.
@@ -10,7 +10,6 @@
 import UIKit
 import MediaPlayer
 import AVKit
-
 
 //*****************************************************************
 // NowPlayingViewControllerDelegate
@@ -325,7 +324,7 @@ class NowPlayingViewController: UIViewController {
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         
-        let radioShoutout = "I'm listening to \(currentStation.name) via KXSF 102.5 FM App"
+        let radioShoutout = "I'm listening to \(currentStation.name) via San Francisco Community Radio (KXSF 102.5FM) App"
         let shareImage = ShareImageGenerator(radioShoutout: radioShoutout, track: currentTrack).generate()
         
         let activityViewController = UIActivityViewController(activityItems: [radioShoutout, shareImage], applicationActivities: nil)

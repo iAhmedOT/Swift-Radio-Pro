@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  DataManager.swift
 //  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 3/24/15.

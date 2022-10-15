@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  StationsViewController.swift
 //  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 7/19/15.
@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import WebKit
 import MediaPlayer
 import AVFoundation
 
@@ -93,7 +94,7 @@ class StationsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "KXSF 102.5FM"
+        title = "KXSF"
     }
 
     //*****************************************************************

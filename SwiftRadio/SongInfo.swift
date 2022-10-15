@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  SongInfo.swift
 //  KXSF FM Radio
 //
 //  Created by Seungsub Oh on 2021/01/12.

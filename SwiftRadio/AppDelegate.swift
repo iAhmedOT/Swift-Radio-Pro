@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  AppDelegate.swift
 //  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 7/2/15.

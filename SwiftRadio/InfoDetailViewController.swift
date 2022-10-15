@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  InfoDetailViewController.swift
 //  KXSF FM Radio
 //
 //  Created by Matthew Fecher on 7/9/15.
