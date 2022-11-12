@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdl-ej-Zz5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdl-ej-Zz5">
     <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,17 +20,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="g23-m5-5pm">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejn-xe-OXk">
-                                <rect key="frame" x="20" y="389.33333333333331" width="350" height="76.666666666666686"/>
-                                <string key="text">Click on the station’s icon above to start streaming.
-More features are coming soon
-Stay tuned..</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dhg-xW-Q3M">
-                                <rect key="frame" x="5" y="101" width="380" height="231"/>
+                                <rect key="frame" x="5" y="101.00000000000001" width="380" height="238.33333333333337"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationCell" rowHeight="90" id="hMr-La-1Ga" customClass="StationTableViewCell" customModule="KXSF" customModuleProvider="target">
@@ -120,12 +111,20 @@ Stay tuned..</string>
                                     <constraint firstItem="pwh-sA-uBF" firstAttribute="top" secondItem="y05-35-5xn" secondAttribute="top" id="wxO-Ao-CC1"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejn-xe-OXk">
+                                <rect key="frame" x="20" y="389" width="350" height="76.666666666666686"/>
+                                <string key="text">Click on the station’s icon above to start streaming.
+More features are coming soon
+Stay tuned..</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rf9-Sj-GRF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Rf9-Sj-GRF" firstAttribute="bottom" secondItem="y05-35-5xn" secondAttribute="bottom" id="0Ab-ql-g3F"/>
-                            <constraint firstItem="Ejn-xe-OXk" firstAttribute="top" secondItem="dhg-xW-Q3M" secondAttribute="bottom" constant="300" id="1Gz-fJ-qo2"/>
                             <constraint firstItem="Rf9-Sj-GRF" firstAttribute="trailing" secondItem="Ejn-xe-OXk" secondAttribute="trailing" constant="20" id="42y-xd-nmr"/>
                             <constraint firstItem="Ejn-xe-OXk" firstAttribute="leading" secondItem="Rf9-Sj-GRF" secondAttribute="leading" constant="20" id="91m-yx-5Kg"/>
                             <constraint firstAttribute="trailing" secondItem="dhg-xW-Q3M" secondAttribute="trailing" constant="5" id="BJa-fm-OWd"/>
@@ -136,9 +135,9 @@ Stay tuned..</string>
                             <constraint firstItem="g23-m5-5pm" firstAttribute="top" secondItem="OvF-E7-hdu" secondAttribute="top" id="Xbk-tp-GLK"/>
                             <constraint firstItem="dhg-xW-Q3M" firstAttribute="leading" secondItem="Rf9-Sj-GRF" secondAttribute="leading" constant="5" id="Y8w-Cx-YGv"/>
                             <constraint firstItem="dhg-xW-Q3M" firstAttribute="top" secondItem="Rf9-Sj-GRF" secondAttribute="top" constant="10" id="aNh-gM-lal"/>
+                            <constraint firstItem="Ejn-xe-OXk" firstAttribute="top" secondItem="dhg-xW-Q3M" secondAttribute="bottom" constant="50" id="bjG-k4-Jiq"/>
                             <constraint firstItem="g23-m5-5pm" firstAttribute="leading" secondItem="Rf9-Sj-GRF" secondAttribute="leading" id="omF-c0-vVe"/>
                             <constraint firstItem="Rf9-Sj-GRF" firstAttribute="trailing" secondItem="dhg-xW-Q3M" secondAttribute="trailing" constant="5" id="tj2-C3-q2r"/>
-                            <constraint firstItem="y05-35-5xn" firstAttribute="top" secondItem="dhg-xW-Q3M" secondAttribute="bottom" priority="250" id="wF0-Xy-rSA"/>
                             <constraint firstItem="y05-35-5xn" firstAttribute="top" secondItem="Ejn-xe-OXk" secondAttribute="bottom" constant="300" id="ypU-3g-8Yk"/>
                         </constraints>
                     </view>
@@ -172,7 +171,7 @@ Stay tuned..</string>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WmY-ug-Nhz" userLabel="Controls Stack View">
-                                <rect key="frame" x="87" y="408" width="216" height="45"/>
+                                <rect key="frame" x="115.66666666666669" y="408" width="159" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6n-gy-z3a" userLabel="PreviousButton">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
@@ -189,7 +188,7 @@ Stay tuned..</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-tN-2wp" userLabel="PauseButton">
-                                        <rect key="frame" x="57" y="0.0" width="45" height="45"/>
+                                        <rect key="frame" x="56.999999999999986" y="0.0" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="0QP-4Y-L0R"/>
                                             <constraint firstAttribute="height" constant="45" id="9ls-Nq-FcF"/>
@@ -202,22 +201,8 @@ Stay tuned..</string>
                                             <action selector="playingPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NEV-en-273"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-bZ-bdt" userLabel="PauseButton">
-                                        <rect key="frame" x="114" y="0.0" width="45" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="ebX-Zd-lOX"/>
-                                            <constraint firstAttribute="height" constant="45" id="vqL-YC-gUW"/>
-                                        </constraints>
-                                        <state key="normal" image="btn-stop">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="selected" image="btn-pause"/>
-                                        <connections>
-                                            <action selector="stopPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ER7-uh-Svz"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdn-tm-QKv" userLabel="NextButton">
-                                        <rect key="frame" x="171" y="0.0" width="45" height="45"/>
+                                        <rect key="frame" x="114" y="0.0" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="ClR-id-HJ9"/>
                                             <constraint firstAttribute="width" constant="45" id="vPQ-1T-f9U"/>
@@ -505,7 +490,6 @@ Stay tuned..</string>
         <image name="btn-pause" width="44" height="44"/>
         <image name="btn-play" width="44" height="44"/>
         <image name="btn-previous" width="44" height="44"/>
-        <image name="btn-stop" width="44" height="44"/>
         <image name="share" width="32" height="32"/>
         <image name="stationImage" width="120" height="75"/>
         <image name="vol-max" width="16.666666030883789" height="14"/>
